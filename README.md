@@ -1,3 +1,5 @@
+# 🚧 WIP (Work in Progress)! Этот проект находится в активной разработке, и некоторые функции могут работать нестабильно.
+
 # ScriptDB
 
 ## Описание (Description in Russian)
@@ -34,7 +36,7 @@ npm start
 ```
 
 ### 3. Обновить запись
-`PUT /data/:table/:id`
+`PUT /data/:table/`
 ```json
 {
   "field1": "newValue"
@@ -87,7 +89,7 @@ npm start
 ```
 
 ### 3. Update a record
-`PUT /data/:table/:id`
+`PUT /data/:table`
 ```json
 {
   "field1": "newValue"
