@@ -9,7 +9,7 @@ interface Config {
     user: string;
     password: string;
 }
-const configDir = path.join(__dirname, 'configs');
+const configDir = path.join(__dirname, '../configs');
 export const configPath = path.join(configDir, 'config.json');
 
 export async function saveConfig(config: Config) {

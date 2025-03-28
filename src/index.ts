@@ -50,10 +50,18 @@ function initServer() {
 }
 
 async function main() {
-    if ((await fs.readFile(configPath)).length > 0) {
-        console.log('Config file already created!');
-        initServer();
-    } else {
+    try {
+        if ((await fs.readFile(configPath)).length > 0) {
+            console.log('Config file already created!');
+            initServer();
+        } else {
+            const config = await setupConfig();
+            console.log('\nDone!');
+            console.log(`You can connect to db by ${config.user}|${config.password}`);
+            await saveConfig(config);
+            initServer();
+        }
+    } catch (e) {
         const config = await setupConfig();
         console.log('\nDone!');
         console.log(`You can connect to db by ${config.user}|${config.password}`);
