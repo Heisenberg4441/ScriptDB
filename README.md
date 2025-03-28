@@ -34,7 +34,7 @@ npm start
 ```
 
 ### 3. Обновить запись
-`PUT /data/:table/:id`
+`PUT /data/:table/`
 ```json
 {
   "field1": "newValue"
