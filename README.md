@@ -87,7 +87,7 @@ npm start
 ```
 
 ### 3. Update a record
-`PUT /data/:table/:id`
+`PUT /data/:table`
 ```json
 {
   "field1": "newValue"
